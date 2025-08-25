@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <title>Company</title>
+</head>
+
+<body>
+    <div id="body">
+        <h1>company</h1>
+        <h2>What do u want to do?</h2>
+
+        <!-- CREATE -->
+        <form>
+            <button type="button" onclick="createFunction()">Create account</button>
+            <div id="create_div" hidden>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="income">income:</label><br>
+                <input type="number" id="income" name="income"><br>
+                <label for="emp_name">Employe Name:</label><br>
+                <input type="text" id="emp_name" name="emp_name"><br>
+                <label for="emp_id">Employe ID:</label><br>
+                <input type="text" id="emp_id" name="emp_id"><br>
+                <button type="button" onclick="sendCreateAjaxReq();">Create</button>
+            </div>
+        </form>
+
+        <!-- DELETE -->
+        <form>
+            <button type="button" onclick="deleteFunction()">Delete account</button>
+            <div id="delete_div" hidden>
+
+                <label for="del_username">Username:</label><br>
+                <input type="text" id="del_username" name="del_username"><br>
+                <button type="button" onclick="sendDeleteAjaxReq();">Delete</button>
+
+            </div>
+        </form>
+
+        <!-- DEPT -->
+        <form>
+            <button type="button" onclick="paydebtFunction()">Pay Debt</button>
+            <div id="paydebt_div" hidden>
+                <br><input type="text" id="pay_debt_username" placeholder="Username">
+                <br><input type="number" id="amount" placeholder="Amount">
+                <button type="button" onclick="sendPayDebtAjaxReq();">Pay Debt</button>
+                <button type="button" id="debt_btn" onclick="sendPayDebtAjaxReq();">Pay All Debt</button>
+
+            </div>
+        </form>
+
+        <!-- INFO -->
+        <form>
+            <button type="button" onclick="infoFunction()">Transaction Info</button>
+            <div id="info_div" hidden>
+                <br><input type="text" id="info_username" placeholder="EmployeNames"><br>
+                <input type="text" id="company_name" placeholder="CompanyName">
+                <br><input type="date" id="date" name="date">
+                <button type="button" onclick="sendInfoAjaxReq();">Info</button>
+                <button type="button" id="all_emp_btn" onclick="sendInfoAjaxReq();">All Employes</button>
+            </div>
+        </form>
+
+    </div>
+</body>
+
+<script>
+    function createFunction() {
+        var x = document.getElementById("create_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function deleteFunction() {
+        var x = document.getElementById("delete_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function paydebtFunction() {
+        var x = document.getElementById("paydebt_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        var b = document.getElementById('debt_btn');
+        var input = document.getElementById("amount");
+        b.style.display = "block";
+
+        input.addEventListener('input', function () {
+            if (input.value != "") {
+                b.style.display = "none";
+            }
+            else {
+                b.style.display = "block";
+            }
+
+        });
+    }
+
+
+    function infoFunction() {
+        var x = document.getElementById("info_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        var b = document.getElementById('all_emp_btn');
+        var input = document.getElementById("info_username");
+        b.style.display = "block";
+
+        input.addEventListener('input', function () {
+            if (input.value != "") {
+                b.style.display = "none";
+            }
+            else {
+                b.style.display = "block";
+            }
+
+        });
+    }
+</script>
+
+</html>

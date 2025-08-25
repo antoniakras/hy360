@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <title>Client</title>
+</head>
+
+<body>
+    <div id="body">
+        <h1>client</h1>
+        <h2>What do u want to do?</h2>
+
+        <!-- CREATE -->
+        <form>
+            <button type="button" onclick="createFunction()">Create account</button>
+            <div id="create_div" hidden>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username"><br>
+                <label for="income">Income:</label><br>
+                <input type="number" id="income" name="income"><br>
+                <button type="button" onclick="sendCreateAjaxReq();">Create</button>
+
+            </div>
+        </form>
+
+        <!-- DELETE -->
+        <form>
+            <button type="button" onclick="deleteFunction()">Delete account</button>
+            <div id="delete_div" hidden>
+
+                <label for="del_username">Username:</label><br>
+                <input type="text" id="del_username" name="del_username"><br>
+                <button type="button" onclick="sendDeleteAjaxReq();">Delete</button>
+
+            </div>
+        </form>
+
+        <!-- PURCHASE -->
+        <form>
+            <button type="button" onclick="purchaseFunction()">Purchase a product</button>
+            <div id="purchase_product_div" hidden>
+
+                <label for="purch_username">Username:</label><br>
+                <input type="text" id="purch_username" name="purch_username"><br>
+                <label for="p_productid">Product ID:</label><br>
+                <input type="text" id="p_productid" name="p_productid"><br>
+                <label for="p_retailer">Retailer:</label><br>
+                <input type="text" id="p_retailer" name="p_retailer"><br>
+                <label for="p_company">Company:</label><br>
+                <input type="text" id="p_company" name="p_company"><br>
+
+                <button type="button" onclick="sendPurchaseAjaxReq();">Buy</button>
+
+            </div>
+
+        </form>
+
+        <!-- RETURN -->
+        <form>
+            <button type="button" onclick="returnFunction()">Return a product</button>
+            <div id="return_div" hidden>
+                <label for="return_username">Username:</label><br>
+                <input type="text" id="return_username" name="return_username"><br>
+                <label for="r_productid">Product ID:</label><br>
+                <input type="text" id="r_productid" name="r_productid"><br>
+                <label for="r_retailer">Retailer:</label><br>
+                <input type="text" id="r_retailer" name="r_retailer"><br>
+                <label for="r_company">Company:</label><br>
+                <input type="text" id="r_company" name="r_company"><br>
+                <button type="button" onclick="sendReturnAjaxReq();">Return</button>
+
+            </div>
+        </form>
+
+        <!-- DEPT -->
+
+
+        <form>
+            <button type="button" onclick="paydebtFunction()">Pay Debt</button>
+            <div id="paydebt_div" hidden>
+                <br><input type="text" id="pay_debt_username" placeholder="Username">
+                <br><input type="number" id="amount" placeholder="Amount">
+                <button type="button" onclick="sendPayDebtAjaxReq();">Pay Debt</button>
+                <button type="button" id="debt_btn" onclick="sendPayDebtAjaxReq();">Pay All Debt</button>
+
+            </div>
+        </form>
+
+
+        <!-- INFO -->
+        <form>
+            <br><label for="date">Transaction Info:</label>
+            <br><input type="text" id="info_username" placeholder="Username"><br>
+            <input type="date" id="date" name="date">
+            <button type="button" onclick="sendInfoAjaxReq();">Info</button>
+        </form>
+
+    </div>
+</body>
+
+<!-- JAVASCRIPT   -->
+<script>
+    function returnFunction() {
+        var x = document.getElementById("return_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function deleteFunction() {
+        var x = document.getElementById("delete_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function createFunction() {
+        var x = document.getElementById("create_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function purchaseFunction() {
+        var x = document.getElementById("purchase_product_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function paydebtFunction() {
+        var x = document.getElementById("paydebt_div");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+
+        var b = document.getElementById('debt_btn');
+        var input = document.getElementById("amount");
+        b.style.display = "block";
+
+        input.addEventListener('input', function () {
+            if (input.value != "") {
+                b.style.display = "none";
+            }
+            else {
+                b.style.display = "block";
+            }
+
+        });
+    }
+</script>
+
+</html>

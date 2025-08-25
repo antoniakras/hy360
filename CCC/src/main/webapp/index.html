@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script src="script.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" /> -->
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="body">
+
+        <header style="font-size: 36px;">Welcome to CCC-360!</header>
+        <h1 style="font-size: 28px;">Select user type:</h1>
+
+        <form action="client.html">
+            <input type="submit" value="Regular Client" />
+        </form>
+
+        <form action="retailer.html">
+            <input type="submit" value="Retailer" />
+        </form>
+
+        <form action="company.html">
+            <input type="submit" value="Company" />
+        </form>
+
+        <button type="button" onclick="goodUsersAjaxReq();">Good Users!</button><br>
+        <br><button type="button" onclick="badUsersAjaxReq();">Bad Users!</button><br>
+        <!-- RETAILER OF THE MONTH -->
+        <br><button type="button" onclick="retailerOTMAjaxReq();">Retailer of ther Month!</button>
+
+        <br>
+        <div id=users>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
