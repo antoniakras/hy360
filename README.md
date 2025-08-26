@@ -1,4 +1,4 @@
-# HY360 – Java Servlets & SQL Backend Application  
+# Retail-Transactions-System – Java Servlets & SQL Backend Application  
 
 ## 🚀 About  
 This project demonstrates the design and implementation of a **Java web application using Servlets, JDBC, and SQL**, deployed on an **Apache Tomcat container**. It follows a **REST-style architecture**, exposing endpoints for data management and interaction with a relational database.  
