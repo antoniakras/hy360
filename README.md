@@ -3,7 +3,7 @@
 ## 🚀 About  
 This project demonstrates the design and implementation of a **Java web application using Servlets, JDBC, and SQL**, deployed on an **Apache Tomcat container**. It follows a **REST-style architecture**, exposing endpoints for data management and interaction with a relational database.  
 
-The application highlights skills in **backend development**, **database schema design**, and **complex SQL queries**, combined with practical deployment experience in a **Java EE environment**.  
+The application highlights skills in **backend development**, and **complex SQL queries**, combined with practical deployment experience in a **Java EE environment**.  
 
 ---
 
@@ -11,7 +11,6 @@ The application highlights skills in **backend development**, **database schema 
 - **Java Servlets backend** – request handling and business logic  
 - **REST-style API** – structured endpoints for CRUD operations  
 - **Relational database integration** – via JDBC and SQL  
-- **E-R diagram design** – translating requirements into database schema  
 - **Tricky SQL queries** – involving joins, aggregations, nested queries, and constraints  
 - **Deployment** – configured and run in an **Apache Tomcat servlet container**  
 
@@ -30,13 +29,6 @@ The application highlights skills in **backend development**, **database schema 
 
 ---
 
-## 📊 Database Design
-
-Entity–Relationship Diagram (E-R) included to illustrate schema.
-
-Schema covers entities, relationships, keys, and constraints.
-
-Showcases normalization and mapping to SQL.
 
 🔍 Queries Highlight
 
