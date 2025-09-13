@@ -3,7 +3,6 @@
 ## 🚀 About  
 This project demonstrates the design and implementation of a **Java web application using Servlets, JDBC, and SQL**, deployed on an **Apache Tomcat container**. It follows a **REST-style architecture**, exposing endpoints for data management and interaction with a relational database.  
 
-The application highlights skills in **backend development**, and **complex SQL queries**, combined with practical deployment experience in a **Java EE environment**.  
 
 ---
 
