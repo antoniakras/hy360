@@ -20,8 +20,8 @@ This project demonstrates the design and implementation of a **Java web applicat
 1. Install [Apache Tomcat](https://tomcat.apache.org/) (tested with v9+).  
 2. Clone the repository:  
    ```bash
-   git clone git@github.com:antoniakras/hy360.git
-   cd hy360
+   git clone git@github.com:antoniakras/retail-transactions-system.git
+   cd retail-transactions-system
 3. Deploy the .war file or the compiled classes to your Tomcat webapps/ directory.
 
 4. Start Tomcat and access the application via: http://localhost:8080/hy360\
